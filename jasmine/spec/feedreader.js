@@ -11,7 +11,7 @@ $(function () {
                 //checks if URL is defined
                 expect(feed.url).toBeDefined();
                 //checks if URL is not empty 
-                expect(feed.length).not.toBe(0);
+                expect(feed.url.length).not.toBe(0);
             });
         });
         it('Has a name defined and this name is not empty', function () {
@@ -26,17 +26,17 @@ $(function () {
     describe('The menu', function () {
         it('menu element is hidden by default', function () {
             // Check the body element class is menu-hidden
-            expect($('body').attr('class')).toBe('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
         it('visibility when the menu icon is clicked', function () {
             // First Click
             $('.menu-icon-link').click();
             // When it clicks, body class should be not menu-hidden
-            expect($('body').attr('class')).not.toBe('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             // Second Click 
             $('.menu-icon-link').click();
             // When second clicks, body class should be menu-hidden to close
-            expect($('body').attr('class')).toBe('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
     });
     describe('Initial Entries', function () {
@@ -48,8 +48,7 @@ $(function () {
         it('there is at least a single .entry element within the .feed container', function (done) {
             // PostLength Null Check
             let postLength = $('.feed .entry')[0];
-            expect(postLength).not.toBeNull();
-            done();
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
     describe('New Feed Selection', function () {
