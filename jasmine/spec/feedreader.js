@@ -93,6 +93,7 @@ $(function () {
             });
         });
         it('there is at least a single .entry element within the .feed container', function (done) {
+            // PostLength Null Check
             let postLength = $('.feed .entry')[0];
             expect(postLength).not.toBeNull();
             done();
