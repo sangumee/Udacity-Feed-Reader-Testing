@@ -1,4 +1,4 @@
-# Udacity-Feed-Reader-Testing ![](https://img.shields.io/badge/Code%20Statue-Open-brightgreen.svg)
+# Udacity-Feed-Reader-Testing ![](https://img.shields.io/badge/Code%20Statue-CLose-red.svg)
 This repository is the code that I created during the Udacity Feed Reader Testing project.
 
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests.
